@@ -11,7 +11,7 @@ Add the module to one of your Terraform configurations to create an OIDC provide
 module "oidc_auth" {
   source = "github.com/moritzheiber/terraform-aws-oidc-github-actions-module"
 
-  github_repositories = toset(["my-org/my-repository])
+  github_repositories = toset(["my-org/my-repository"])
   role_names          = toset(["some-role"])
 }
 

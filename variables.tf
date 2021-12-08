@@ -1,7 +1,7 @@
 variable "github_actions_oidc_url" {
   type        = string
   description = "The URL to use for the OIDC handshake"
-  default     = "https://vstoken.actions.githubusercontent.com"
+  default     = "https://token.actions.githubusercontent.com"
 
   validation {
     condition     = substr(var.github_actions_oidc_url, 0, 5) == "https"

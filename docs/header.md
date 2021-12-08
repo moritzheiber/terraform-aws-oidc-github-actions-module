@@ -51,7 +51,7 @@ resource "aws_iam_role_policy_attachment" "attachment" {
 
 [AWS provides a "native" GitHub Actions action](https://github.com/aws-actions/configure-aws-credentials) to enable you to use the configured OIDC provider. Just add the following two bits to any job for a GitHub repository you passed under `github_repository` to the module previously and you should be good to go:
 
-```
+```yaml
 jobs:
     some-job:
         # [...]
@@ -70,7 +70,7 @@ jobs:
             # you assigned via the policy associated with the role you want to assume
 ```
 
-_Note: You can get the ARN of any of the roles created via the `roles` output of the OIDC module. In keeping with our previous example, the ARN for the `some-role` role would be accessible via `module.oidc_auth.roles["some-role"]`._
+You can get the ARN of any of the roles created via the `roles` output of the OIDC module. In keeping with our previous example, the ARN for the `some-role` role would be accessible via `module.oidc_auth.roles["some-role"]`.
 
 You will probably want to add the ARN for `role-to-assume` as [a GitHub Actions secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets) instead of writing it directly into the workflow YAML.
 

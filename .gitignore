@@ -1,0 +1,5 @@
+/.terraform*
+/*.tfvars
+/*.tfstate*
+
+!.terraform-docs.yml

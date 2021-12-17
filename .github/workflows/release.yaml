@@ -1,0 +1,38 @@
+name: Release new version
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - "v*.*.*"
+
+jobs:
+  lint-validate:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hashicorp/setup-terraform@v1
+      - name: Init
+        run: terraform init
+      - name: Validate
+        run: terraform validate
+      - name: tfsec
+        uses: aquasecurity/tfsec-pr-commenter-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v1
+      - name: Install tflint plugins
+        run: tflint --init
+      - name: Lint Terraform files
+        run: tflint
+  create-release:
+    needs: [lint-validate]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        name: Create release
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false

@@ -1,4 +1,4 @@
-name: Release new version
+name: Test
 on:
   pull_request:
   push:
@@ -40,5 +40,6 @@ jobs:
       - uses: hashicorp/setup-terraform@v1
       - uses: actions/setup-go@v2
       - run: cp mocks/mock_provider.tf ../
+      - run: terraform -chdir=.. init
       - name: terratest
         run: go test

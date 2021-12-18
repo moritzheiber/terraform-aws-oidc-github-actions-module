@@ -3,10 +3,14 @@ package test
 import (
 	"testing"
 
+	"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iam"
 	"github.com/gruntwork-io/terratest/modules/aws"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"github.com/stretchr/testify/assert"
+
+	awssdk "github.com/aws/aws-sdk-go/aws"
 )
 
 const allowedRegion = "eu-central-1"
@@ -46,7 +50,14 @@ func TestGitHubActionsOidcModuleGoodInput(t *testing.T) {
 		terraform.InitAndApply(t, terraformOptions)
 
 		arns := terraform.OutputMap(t, terraformOptions, "roles")
-		client := aws.NewIamClient(t, awsRegion)
+		session, _ := session.NewSession(&awssdk.Config{
+			Region:           awssdk.String(awsRegion),
+			Credentials:      credentials.NewStaticCredentials("test", "test", ""),
+			S3ForcePathStyle: awssdk.Bool(true),
+			Endpoint:         awssdk.String("http://localhost:4566"),
+		})
+
+		client := iam.New(session)
 
 		for name, arn := range arns {
 			role, err := client.GetRole(&iam.GetRoleInput{

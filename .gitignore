@@ -1,5 +1,6 @@
 /.terraform*
 /*.tfvars
 /*.tfstate*
+/mock_provider.tf
 
 !.terraform-docs.yml

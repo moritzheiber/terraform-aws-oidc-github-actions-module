@@ -39,6 +39,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_wrapper: false
       - uses: actions/setup-go@v2
       - run: cp mocks/mock_provider.tf ../
       - name: terratest

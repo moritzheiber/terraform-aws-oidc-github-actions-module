@@ -1,8 +1,14 @@
 version: 2
 updates:
   - package-ecosystem: "terraform"
-    directory: "."
+    directory: "/"
     schedule:
       interval: "weekly"
       day: "tuesday"
+      time: "09:00"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
       time: "09:00"

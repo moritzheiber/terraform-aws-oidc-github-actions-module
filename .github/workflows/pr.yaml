@@ -1,9 +1,9 @@
-name: Test
+name: Test PR
 on:
-  workflow_call:
+  pull_request:
 
 jobs:
-  lint-validate:
+  test:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -13,7 +13,9 @@ jobs:
       - name: Validate
         run: terraform validate
       - name: tfsec
-        uses: aquasecurity/tfsec-action@v1.0.0
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.0.2
+        with:
+          github_token: ${{ github.token }}
       - name: Setup TFLint
         uses: terraform-linters/setup-tflint@v1
       - name: Install tflint plugins
@@ -37,5 +39,6 @@ jobs:
           terraform_wrapper: false
       - uses: actions/setup-go@v2
       - run: cp mocks/mock_provider.tf ../
+      - run: terraform -chdir=.. init
       - name: terratest
         run: go test

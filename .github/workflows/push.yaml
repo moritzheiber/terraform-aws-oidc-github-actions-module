@@ -1,0 +1,9 @@
+name: Test on push
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    uses: moritzheiber/terraform-aws-oidc-github-actions-module/.github/workflows/test.yml@main

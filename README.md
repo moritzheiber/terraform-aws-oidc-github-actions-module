@@ -9,7 +9,7 @@ Add the module to one of your Terraform configurations to create an OIDC provide
 
 ```hcl
 module "oidc_auth" {
-  source = "github.com/moritzheiber/terraform-aws-oidc-github-actions-module?ref=v0.1.0"
+  source = "github.com/moritzheiber/terraform-aws-oidc-github-actions-module?ref=v0.1.2"
 
   github_repositories = toset(["my-org/my-repository"])
   role_names          = toset(["some-role"])
@@ -82,14 +82,14 @@ You will probably want to add the ARN for `role-to-assume` as [a GitHub Actions 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.67.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.73.0 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | ~> 3.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.67.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.70.0 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | 3.1.0 |
 
 ## Modules

@@ -13,7 +13,7 @@ jobs:
       - name: Validate
         run: terraform validate
       - name: tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@v1.0.2
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.0.3
         with:
           github_token: ${{ github.token }}
       - name: Setup TFLint

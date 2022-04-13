@@ -37,7 +37,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v1
         with:
           terraform_wrapper: false
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v3
       - run: cp mocks/mock_provider.tf ../
       - run: terraform -chdir=.. init
       - name: terratest

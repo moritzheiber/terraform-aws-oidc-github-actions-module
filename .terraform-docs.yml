@@ -6,7 +6,7 @@ header-from: docs/header.md
 footer-from: ""
 
 sections:
-  hide: []
+  hide: [providers]
   show: []
 
 content: ""

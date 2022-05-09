@@ -1,6 +1,7 @@
 locals {
   have_repositories = length(var.github_repositories) > 0
   plain_oidc_url    = trimprefix(var.github_actions_oidc_url, "https://")
+  thumbprint        = data.tls_certificate.github_actions_oidc_endpoint.certificates.0.sha1_fingerprint
 }
 
 resource "aws_iam_openid_connect_provider" "github" {
@@ -12,7 +13,7 @@ resource "aws_iam_openid_connect_provider" "github" {
   ]
 
   thumbprint_list = [
-    data.tls_certificate.github_actions_oidc_endpoint.certificates.0.sha1_fingerprint
+    local.thumbprint
   ]
 
   tags = var.tags

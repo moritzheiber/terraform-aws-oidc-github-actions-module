@@ -1,3 +1,5 @@
+[![Module Releases](https://img.shields.io/badge/dynamic/json?color=%237b42bc&label=Release&query=version&url=https%3A%2F%2Fregistry.terraform.io%2Fv1%2Fmodules%2Fmoritzheiber%2Foidc-github-actions-module%2Faws&logo=terraform&style=for-the-badge)](https://registry.terraform.io/modules/moritzheiber/oidc-github-actions-module/aws/latest) ![Module Downloads](https://img.shields.io/badge/dynamic/json?color=%237b42bc&label=Downloads&query=data.attributes.total&url=https%3A%2F%2Fregistry.terraform.io%2Fv2%2Fmodules%2Fmoritzheiber%2Foidc-github-actions-module%2Faws%2Fdownloads%2Fsummary&logo=terraform&style=for-the-badge)
+
 # Terraform AWS OIDC GitHub Actions Module
 
 A module for creating a federated OIDC provider on AWS for dynamically authenticating and authorizing GitHub Actions workflow runs.

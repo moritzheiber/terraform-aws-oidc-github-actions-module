@@ -12,3 +12,9 @@ updates:
       interval: "weekly"
       day: "wednesday"
       time: "09:00"
+  - package-ecosystem: "gomod"
+    directory: "/tests"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "09:00"

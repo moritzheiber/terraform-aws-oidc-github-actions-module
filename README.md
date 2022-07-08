@@ -169,7 +169,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_github_actions_oidc_url"></a> [github\_actions\_oidc\_url](#input\_github\_actions\_oidc\_url) | The URL to use for the OIDC handshake | `string` | `"https://token.actions.githubusercontent.com"` | no |
-| <a name="input_github_repositories"></a> [github\_repositories](#input\_github\_repositories) | A list of GitHub repositories the OIDC provider should authenticate against. The format is <org/user>/<repository-name> | `set(string)` | `[]` | no |
+| <a name="input_github_repositories"></a> [github\_repositories](#input\_github\_repositories) | A list of GitHub repositories the OIDC provider should authenticate against. The format is org/user/repository-name | `set(string)` | `[]` | no |
 | <a name="input_role_names"></a> [role\_names](#input\_role\_names) | The set of names for roles that GitHub Actions will be able to assume | `set(string)` | `[]` | no |
 | <a name="input_role_path"></a> [role\_path](#input\_role\_path) | The path the created roles are going to live under | `string` | `"/"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A key > value map of tags to associate with the resources that are being created | `map(string)` | `{}` | no |

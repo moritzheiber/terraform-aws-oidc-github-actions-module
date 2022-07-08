@@ -11,12 +11,12 @@ variable "github_actions_oidc_url" {
 
 variable "github_repositories" {
   type        = set(string)
-  description = "A list of GitHub repositories the OIDC provider should authenticate against. The format is <org/user>/<repository-name>"
+  description = "A list of GitHub repositories the OIDC provider should authenticate against. The format is org/user/repository-name"
   default     = []
 
   validation {
     condition     = alltrue([for repo in var.github_repositories : substr(repo, 0, 4) != "http"])
-    error_message = "The repositories must not have a http(s):// prefix. The format is <org/user>/<repository-name>."
+    error_message = "The repositories must not have a http(s):// prefix. The format is org/user/repository-name."
   }
 }
 

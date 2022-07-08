@@ -2,5 +2,6 @@
 /*.tfvars
 /*.tfstate*
 /mock_provider.tf
+/results.json
 
 !.terraform-docs.yml

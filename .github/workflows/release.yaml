@@ -6,6 +6,9 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  contents: write
+
 jobs:
   test:
     uses: moritzheiber/terraform-aws-oidc-github-actions-module/.github/workflows/test.yaml@main
@@ -14,8 +17,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        name: Create release
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
+          generate_release_notes: true

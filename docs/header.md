@@ -10,7 +10,7 @@ Add the module to one of your Terraform configurations to create an OIDC provide
 
 ```hcl
 module "oidc_auth" {
-  source = "github.com/moritzheiber/terraform-aws-oidc-github-actions-module?ref=v0.2.2"
+  source = "github.com/moritzheiber/terraform-aws-oidc-github-actions-module"
 
   github_repositories = toset(["my-org/my-repository"])
   role_names          = toset(["some-role"])
@@ -20,6 +20,8 @@ output "github_actions_roles" {
     value = module.oidc_auth.roles
 }
 ```
+
+_Note: Usually you will want to use a specific version of the module by using the `version` attribute._
 
 Continue with assigning permissions to these roles:
 

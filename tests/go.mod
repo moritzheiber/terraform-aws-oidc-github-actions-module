@@ -3,7 +3,7 @@ module terraform-aws-oidc-github-actions-module
 go 1.17
 
 require (
-	github.com/aws/aws-sdk-go v1.44.128
+	github.com/aws/aws-sdk-go v1.44.133
 	github.com/gruntwork-io/terratest v0.40.24
 	github.com/stretchr/testify v1.8.1
 
@@ -51,11 +51,11 @@ require (
 	github.com/urfave/cli/v2 v2.4.0 // indirect
 	github.com/zclconf/go-cty v1.10.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
-	golang.org/x/crypto v0.0.0-20210513164829-c07d793c2f9a // indirect
-	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	golang.org/x/net v0.1.0 // indirect
 	golang.org/x/oauth2 v0.0.0-20220309155454-6242fa91716a // indirect
-	golang.org/x/sys v0.0.0-20220517195934-5e4e11fc645e // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/api v0.73.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect

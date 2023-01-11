@@ -21,7 +21,7 @@ output "github_actions_roles" {
 }
 ```
 
-_Note: Usually you will want to use a specific version of the module by using the `version` attribute._
+*Note: Usually you will want to use a specific version of the module by using the `version` attribute.*
 
 Continue with assigning permissions to these roles:
 

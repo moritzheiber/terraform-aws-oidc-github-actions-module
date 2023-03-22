@@ -38,7 +38,7 @@ jobs:
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_wrapper: false
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v4
       - run: cp mocks/mock_provider.tf ../
       - name: terratest
         run: go test -v -run ${{ matrix.test }}

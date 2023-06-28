@@ -150,7 +150,7 @@ Afterwards your workflows should run without authentication issues again.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | ~> 4.0.1 |
 
 ## Modules

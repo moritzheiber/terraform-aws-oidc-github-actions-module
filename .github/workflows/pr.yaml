@@ -6,7 +6,7 @@ jobs:
   lint-validate:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v2
       - name: Init
         run: terraform init
@@ -33,7 +33,7 @@ jobs:
         ports:
           - 4566:4566
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_wrapper: false

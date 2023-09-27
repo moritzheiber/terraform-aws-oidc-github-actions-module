@@ -15,7 +15,7 @@ jobs:
       - name: tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
       - name: Setup TFLint
-        uses: terraform-linters/setup-tflint@v3
+        uses: terraform-linters/setup-tflint@v4
       - name: Install tflint plugins
         run: tflint --init
       - name: Lint Terraform files

@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
-      - uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v3
       - name: Init
         run: terraform init
       - name: Validate
@@ -35,7 +35,7 @@ jobs:
           - 4566:4566
     steps:
       - uses: actions/checkout@v4
-      - uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false
       - uses: actions/setup-go@v4

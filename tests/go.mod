@@ -3,7 +3,7 @@ module terraform-aws-oidc-github-actions-module
 go 1.17
 
 require (
-	github.com/aws/aws-sdk-go v1.48.2
+	github.com/aws/aws-sdk-go v1.48.7
 	github.com/gruntwork-io/terratest v0.46.7
 	github.com/stretchr/testify v1.8.4
 

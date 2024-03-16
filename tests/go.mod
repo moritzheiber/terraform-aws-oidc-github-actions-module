@@ -1,6 +1,8 @@
 module terraform-aws-oidc-github-actions-module
 
-go 1.17
+go 1.21
+
+toolchain go1.21.1
 
 require (
 	github.com/aws/aws-sdk-go v1.50.27

@@ -5,7 +5,7 @@ toolchain go1.22.5
 
 require (
 	github.com/aws/aws-sdk-go v1.55.5
-	github.com/gruntwork-io/terratest v0.48.0
+	github.com/gruntwork-io/terratest v0.48.1
 	github.com/stretchr/testify v1.10.0
 
 )

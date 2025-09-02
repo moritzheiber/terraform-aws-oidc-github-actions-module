@@ -4,7 +4,7 @@ on:
 
 jobs:
   lint-validate:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v3
@@ -21,10 +21,14 @@ jobs:
       - name: Lint Terraform files
         run: tflint
   terratest:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        test: [TestGitHubActionsOidcModuleGoodInput, TestGitHubActionsOidcModuleBadInput]
+        test:
+          [
+            TestGitHubActionsOidcModuleGoodInput,
+            TestGitHubActionsOidcModuleBadInput,
+          ]
     defaults:
       run:
         working-directory: tests

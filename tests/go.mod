@@ -8,7 +8,6 @@ require (
 	github.com/aws/aws-sdk-go v1.55.6
 	github.com/gruntwork-io/terratest v0.48.2
 	github.com/stretchr/testify v1.10.0
-
 )
 
 require (
@@ -84,7 +83,7 @@ require (
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/tmccombs/hcl2json v0.6.5 // indirect
-	github.com/ulikunitz/xz v0.5.12 // indirect
+	github.com/ulikunitz/xz v0.5.14 // indirect
 	github.com/urfave/cli/v2 v2.27.6 // indirect
 	github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 // indirect
 	github.com/zclconf/go-cty v1.16.2 // indirect

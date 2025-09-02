@@ -6,7 +6,7 @@ jobs:
   lint-validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: hashicorp/setup-terraform@v3
       - name: Init
         run: terraform init
@@ -38,7 +38,7 @@ jobs:
         ports:
           - 4566:4566
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false

@@ -7,7 +7,7 @@ toolchain go1.23.2
 require (
 	github.com/aws/aws-sdk-go v1.55.8
 	github.com/gruntwork-io/terratest v0.50.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 )
 
 require (

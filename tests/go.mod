@@ -1,12 +1,10 @@
 module terraform-aws-oidc-github-actions-module
 
-go 1.23.0
-
-toolchain go1.23.2
+go 1.24.0
 
 require (
 	github.com/aws/aws-sdk-go v1.55.8
-	github.com/gruntwork-io/terratest v0.50.0
+	github.com/gruntwork-io/terratest v0.51.0
 	github.com/stretchr/testify v1.11.1
 )
 

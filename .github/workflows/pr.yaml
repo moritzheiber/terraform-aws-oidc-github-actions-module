@@ -38,6 +38,8 @@ jobs:
         with:
           terraform_wrapper: false
       - uses: actions/setup-go@v6
+        with:
+          go-version: 'stable'
       - run: cp mocks/mock_provider.tf ../
       - run: terraform -chdir=.. init
       - name: terratest

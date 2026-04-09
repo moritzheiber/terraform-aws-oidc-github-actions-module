@@ -34,7 +34,7 @@ jobs:
         working-directory: tests
     services:
       ministack:
-        image: nahuelnucera/ministack:v1.1.56
+        image: nahuelnucera/ministack:1.1.56
         ports:
           - 4566:4566
     steps:

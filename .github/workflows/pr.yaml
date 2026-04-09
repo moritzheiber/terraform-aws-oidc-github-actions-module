@@ -28,8 +28,8 @@ jobs:
       run:
         working-directory: tests
     services:
-      localstack:
-        image: localstack/localstack
+      ministack:
+        image: nahuelnucera/ministack:v1.1.56
         ports:
           - 4566:4566
     steps:

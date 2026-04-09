@@ -6,15 +6,27 @@ updates:
       interval: "weekly"
       day: "tuesday"
       time: "09:00"
+    groups:
+      terraform-dependencies:
+        patterns:
+          - "*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "wednesday"
       time: "09:00"
+    groups:
+      github-actions-dependencies:
+        patterns:
+          - "*"
   - package-ecosystem: "gomod"
     directory: "/tests"
     schedule:
       interval: "weekly"
       day: "wednesday"
       time: "09:00"
+    groups:
+      gomod-dependencies:
+        patterns:
+          - "*"
